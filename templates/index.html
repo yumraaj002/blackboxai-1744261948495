@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block hero_title %}
+    Detect Fake News
+{% endblock %}
+
+{% block hero_subtitle %}
+    Use AI to analyze and detect if a news article is real or fake
+{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+        <div class="p-6">
+            <form action="{{ url_for('predict') }}" method="post" class="space-y-6" id="newsForm">
+                <div>
+                    <label for="news_text" class="block text-sm font-medium text-gray-700">
+                        Enter News Article Text
+                    </label>
+                    <div class="mt-1">
+                        <textarea
+                            id="news_text"
+                            name="news_text"
+                            rows="6"
+                            class="shadow-sm focus:ring-blue-500 focus:border-blue-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-2"
+                            placeholder="Paste your news article text here..."
+                            required
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <button
+                        type="submit"
+                        class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out"
+                    >
+                        <i class="fas fa-search mr-2"></i>
+                        Analyze Text
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="mt-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-blue-600 mb-4">
+                    <i class="fas fa-paste text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">1. Input Text</h3>
+                <p class="text-gray-500">Paste the news article text you want to analyze into the text box above.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-blue-600 mb-4">
+                    <i class="fas fa-brain text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">2. AI Analysis</h3>
+                <p class="text-gray-500">Our AI model analyzes the text using advanced machine learning algorithms.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-blue-600 mb-4">
+                    <i class="fas fa-check-circle text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">3. Get Results</h3>
+                <p class="text-gray-500">Receive instant feedback on whether the news is likely real or fake.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tips Section -->
+<div class="mt-12 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-blue-50 rounded-lg p-6">
+        <h3 class="text-lg font-medium text-blue-900 mb-4">
+            <i class="fas fa-lightbulb mr-2"></i>
+            Tips for Best Results
+        </h3>
+        <ul class="list-disc list-inside text-blue-800 space-y-2">
+            <li>Paste the complete article text for more accurate results</li>
+            <li>Include the article headline if available</li>
+            <li>Remove any advertisements or unrelated content</li>
+            <li>The longer the text, the more accurate the analysis</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('newsForm').addEventListener('submit', function(e) {
+    const newsText = document.getElementById('news_text').value.trim();
+    if (!newsText) {
+        e.preventDefault();
+        alert('Please enter some text to analyze.');
+    }
+});
+</script>
+{% endblock %}
