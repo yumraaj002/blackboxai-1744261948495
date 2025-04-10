@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block hero_title %}
+    Page Not Found
+{% endblock %}
+
+{% block hero_subtitle %}
+    The page you're looking for doesn't exist
+{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+        <div class="text-6xl text-blue-600 mb-8">
+            <i class="fas fa-search"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">404 Error</h2>
+        <p class="text-gray-600 mb-8">
+            We couldn't find the page you were looking for. It might have been removed, renamed, or doesn't exist.
+        </p>
+        <a href="/" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+            <i class="fas fa-home mr-2"></i>
+            Return Home
+        </a>
+    </div>
+</div>
+{% endblock %}
