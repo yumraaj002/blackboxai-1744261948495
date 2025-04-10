@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block hero_title %}
+    About Our System
+{% endblock %}
+
+{% block hero_subtitle %}
+    Learn how our AI-powered fake news detection system works
+{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Introduction -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                <i class="fas fa-info-circle text-blue-600 mr-2"></i>
+                What is Fake News Detection?
+            </h2>
+            <p class="text-gray-600 mb-4">
+                Our fake news detection system uses advanced machine learning algorithms to analyze news articles and determine their likelihood of being real or fake. The system examines various aspects of the text, including writing style, emotional tone, and content patterns typically associated with misleading information.
+            </p>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                <i class="fas fa-cogs text-blue-600 mr-2"></i>
+                How It Works
+            </h2>
+            <div class="space-y-4">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                        1
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium text-gray-900">Text Processing</h3>
+                        <p class="mt-1 text-gray-600">The system first processes the input text by cleaning and standardizing it, removing unnecessary elements while preserving important information.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                        2
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium text-gray-900">Feature Extraction</h3>
+                        <p class="mt-1 text-gray-600">Key features are extracted from the text using natural language processing techniques, converting the text into a format that our AI model can analyze.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                        3
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium text-gray-900">AI Analysis</h3>
+                        <p class="mt-1 text-gray-600">Our machine learning model analyzes these features and makes a prediction based on patterns it has learned from thousands of examples.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technology Stack -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                <i class="fas fa-layer-group text-blue-600 mr-2"></i>
+                Technology Stack
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="border rounded-lg p-4">
+                    <h3 class="font-medium text-gray-900 mb-2">
+                        <i class="fab fa-python text-blue-600 mr-2"></i>
+                        Python
+                    </h3>
+                    <p class="text-gray-600">Core programming language used for the backend and machine learning components.</p>
+                </div>
+                <div class="border rounded-lg p-4">
+                    <h3 class="font-medium text-gray-900 mb-2">
+                        <i class="fas fa-brain text-blue-600 mr-2"></i>
+                        Scikit-learn
+                    </h3>
+                    <p class="text-gray-600">Machine learning library used for training and prediction.</p>
+                </div>
+                <div class="border rounded-lg p-4">
+                    <h3 class="font-medium text-gray-900 mb-2">
+                        <i class="fas fa-server text-blue-600 mr-2"></i>
+                        Flask
+                    </h3>
+                    <p class="text-gray-600">Web framework powering the application interface.</p>
+                </div>
+                <div class="border rounded-lg p-4">
+                    <h3 class="font-medium text-gray-900 mb-2">
+                        <i class="fab fa-css3 text-blue-600 mr-2"></i>
+                        Tailwind CSS
+                    </h3>
+                    <p class="text-gray-600">Modern utility-first CSS framework for the user interface.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+        <div class="flex">
+            <div class="flex-shrink-0">
+                <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+            </div>
+            <div class="ml-3">
+                <h3 class="text-sm font-medium text-yellow-800">Disclaimer</h3>
+                <div class="mt-2 text-sm text-yellow-700">
+                    <p>
+                        While our system uses advanced AI technology, it should not be considered infallible. Always cross-reference information with reliable sources and use critical thinking when evaluating news articles. The system provides predictions based on patterns it has learned, but the final judgment should always involve human discretion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
